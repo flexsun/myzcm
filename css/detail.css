@@ -1,0 +1,204 @@
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img,
+footer {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+fieldset,
+img {
+  border: none;
+}
+img {
+  display: block;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+ul,
+ol {
+  list-style: none;
+}
+input {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "SimSun", "宋体";
+}
+input::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+select,
+input {
+  vertical-align: middle;
+}
+select,
+input,
+textarea {
+  font-size: 12px;
+  margin: 0;
+}
+input[type="text"],
+input[type="password"],
+textarea {
+  outline-style: none;
+  -webkit-appearance: none;
+}
+textarea {
+  resize: none;
+}
+input,
+textarea {
+  background: none;
+  border: none;
+}
+table {
+  border-collapse: collapse;
+}
+body {
+  color: #333;
+  font: 12px/20px "微软雅黑", "SimSun", "Arial Narrow", HELVETICA;
+  background: #f9f9f9;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+a:visited {
+  color: #666;
+}
+a:hover,
+a:active,
+a:focus {
+  color: #ff8400;
+  text-decoration: underline;
+}
+header {
+  height: 0.92rem;
+  padding-left: 0.27rem;
+  padding-right: 0.27rem;
+  color: #fff;
+  background: #FA3432;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .iconfont {
+  font-size: 0.34rem;
+}
+header h3 {
+  font-size: 0.28rem;
+  font-weight: normal;
+}
+.banner {
+  background: linear-gradient(to bottom, #ff3c01, #d80706);
+  height: 2.22rem;
+  text-align: center;
+}
+.banner p {
+  color: #fff;
+}
+.banner p:first-child {
+  font-size: 0.68rem;
+  padding-top: 0.5rem;
+  line-height: 0.68rem;
+}
+.banner p:last-child {
+  font-size: 0.3rem;
+  margin-top: 0.42rem;
+}
+.plan {
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 0.79rem;
+  font-size: 0.3rem;
+  color: #777;
+}
+.plan a {
+  width: 50%;
+  text-align: center;
+  color: #777;
+  font-size: 0.3rem;
+}
+.support {
+  background: #fff;
+  padding-top: 0.68rem;
+}
+.support .data-list {
+  background: url(../img/detail_icon_bg.png) no-repeat center center;
+  margin-left: 0.55rem;
+  margin-right: 0.55rem;
+  width: 6.4rem;
+  height: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  color: #ffc116;
+  justify-content: space-around;
+  align-items: center;
+}
+.support .data-list div .iconfont {
+  width: 0.55rem;
+  height: 0.55rem;
+  text-align: center;
+  line-height: 0.55rem;
+  font-size: 0.24rem;
+}
+.support .data-list div span {
+  font-size: 0.24rem;
+}
+footer {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border-top: 1px solid #ccc;
+  height: 1.05rem;
+}
+footer a {
+  margin-right: 0.32rem;
+  margin-left: 0.32rem;
+  display: block;
+  color: #f90;
+  font-size: 0.32rem;
+  text-decoration: underline;
+}
+footer a:visited {
+  color: #f90;
+}
+footer button {
+  width: 5.17rem;
+  height: 0.82rem;
+  font-size: 0.36rem;
+  border-radius: ;
+  background: #fa3432;
+  border: none;
+  outline: none;
+}

@@ -1,0 +1,118 @@
+@import "z.less";
+
+.reset-sina();
+header{
+    .h(92);
+    .pl(27);
+    .pr(27);
+    color:#fff;
+    background: #FA3432;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .iconfont{
+        .fs(34);
+    }
+    h3{
+        .fs(28);
+        font-weight: normal;
+    }
+}
+.banner{
+//  background: url(../img/detailbgrepeat.png) repeat-x;
+    background: linear-gradient(to bottom,#ff3c01,#d80706);
+    .h(222);
+    text-align: center;
+    p{
+        color:#fff;
+        &:first-child{
+            .fs(68);
+            .pt(50);
+            .lh(68);
+        }
+        &:last-child{
+            .fs(30); 
+            
+            .mt(42);
+        }
+    }
+}
+
+.plan{
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .h(79);
+    .fs(30);
+    color:#777;
+    a{
+        width: 50%;
+        text-align: center;
+        color: #777;
+        .fs(30);
+    }
+}
+.support{
+     background: #fff;
+     .pt(68);
+    .data-list{
+                
+               background:url(../img/detail_icon_bg.png) no-repeat center center;
+                .ml(55);
+                .mr(55);
+               .w(640);
+               .h(200);
+               display: flex;
+                flex-wrap: wrap;
+                color:#ffc116;
+                justify-content: space-around;
+                align-items: center;
+               div{ 
+                   
+                   .iconfont{
+                     
+                       .w(55);
+                       .h(55);
+                       text-align: center;
+                       .lh(55);
+                       .fs(24);
+                   }
+                   span{
+                       .fs(24);
+                   }
+               }
+        
+    }
+   
+}
+footer{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top:1px solid #ccc;
+    .h(105);
+    a{
+        .mr(32);
+        .ml(32);
+        display: block;
+        color: #f90;
+        .fs(32);
+        &:visited{
+            color: #f90;
+        }
+        text-decoration: underline;
+    }
+    button{
+        .w(517);
+        .h(82);
+        .fs(36);
+        border-radius:;
+        background: #fa3432;
+        border: none;
+        outline: none;
+    }
+}
