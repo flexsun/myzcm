@@ -172,6 +172,52 @@ header h3 {
 .support .data-list div span {
   font-size: 0.24rem;
 }
+.proccess {
+  margin-top: 0.5rem;
+}
+.proccess .proccessbody {
+  width: 6.82rem;
+  height: 0.15rem;
+  border-radius: 0.07rem;
+  background: #ccc;
+  margin: 0 auto;
+  position: relative;
+}
+.proccess .proccessbody .pro-front {
+  width: 0rem;
+  height: 0.15rem;
+  border-radius: 0.05rem;
+  background-color: #fb0502;
+  transition: width 0.5s linear;
+}
+.proccess .proccessbody .pro-block {
+  width: 0.6rem;
+  height: 0.32rem;
+  line-height: 0.32rem;
+  border-radius: 0.05rem;
+  font-size: 0.24rem;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: -0.46rem;
+  left: -0.3rem;
+  transition: left 0.5s linear;
+  background: #fb0502;
+}
+.proccess .proccessbody .pro-block:after {
+  content: '';
+  display: block;
+  border-width: 12;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-style: solid dashed dashed dashed;
+  border-color: #fb0502 transparent transparent transparent;
+  border-width: 0.12rem;
+  position: absolute;
+  top: 0.32rem;
+  left: 0.17rem;
+}
 footer {
   display: flex;
   align-items: center;

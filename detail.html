@@ -32,43 +32,21 @@
 				<div><i class="iconfont icon-zhengmian"></i><span>省级法律所法律支持</span></div>
 			</div>
 		</section>
+		<section class="proccess">
+			<div class="proccessbody">
+				<div class="pro-front" data-proccess="50"></div>
+				<div class="pro-block">0%</div>
+			</div>
+			<p class="pro-info">
+				<span>已投资<em>37</em>人</span>
+				<span>剩余可投<em>664444</em>元</span>
+			</p>
+		</section>
 		<div>
 			<br>站位符
 				<br>站位符
 					<br>站位符
-			<br>站位符
-				<br>站位符
-					<br>站位符
-						<br>站位符
-				<br>站位符
-					<br>站位符
-						<br>站位符
-				<br>站位符
-					<br>站位符
-						<br>站位符
-				<br>站位符
-					<br>站位符<br>站位符
-				<br>站位符
-					<br>站位符
-						<br>站位符
-				<br>站位符
-					<br>站位符
-						<br>站位符
-				<br>站位符
-					<br>站位符
-						<br>站位符
-				<br>站位符
-					<br>站位符
-						<br>站位符
-				<br>站位符
-					<br>站位符
-						<br>站位符
-				<br>站位符
-					<br>站位符<br>站位符
-				<br>站位符
-					<br>站位符
-						
-																			
+												
 		</div>
 		<footer>
 			<a href="">收益估算</a>
@@ -76,6 +54,64 @@
 		</footer>
 		<script src="js/zepto/zepto.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/zepto/event.js" type="text/javascript" charset="utf-8"></script>
-		
+		<script src="js/zepto/touch.js" type="text/javascript" charset="utf-8"></script>		
+		<script type="text/javascript">
+			//进度条
+			window.requestAnimFrame = (function(){
+				  return  window.requestAnimationFrame       ||
+				          window.webkitRequestAnimationFrame ||
+				          window.mozRequestAnimationFrame    ||
+				          function( callback ){
+				            window.setTimeout(callback, 1000 / 60);
+				          };
+			})();
+			
+			window.cancelrequestAnimFrame = (function(){
+				  return  window.cancelAnimationFrame   ||
+				          window.webkitCancelAnimationFrame ||
+				          window.mozCancelAnimationFrame    ||
+				          window.clearTimeout;
+				          
+			})();
+			$(function(){
+				var value= $('.pro-front').attr('data-proccess');
+				var totalwidth=$('.proccessbody').width();
+				var currentvalue=0;
+				var prowidth=value/100 * totalwidth;
+				var pblockWidth=$('.pro-block').width();
+				console.info(prowidth);
+				console.info(pblockWidth);
+				$('.pro-front').css('width',prowidth);
+				$('.pro-block').css("left",prowidth-pblockWidth/2);
+				function addNumber(){
+					var step=value/30;
+					currentvalue=currentvalue+step;
+					currentvalue=currentvalue>value?value:currentvalue;
+					$('.pro-block').html(currentvalue+"%");
+					var timer=requestAnimationFrame(function(){
+						
+						addNumber();	
+					});
+					
+					if(currentvalue>=value){
+						cancelAnimationFrame(timer);
+					}
+				}
+				addNumber();
+				
+				$('button').on({'tap':function(){
+					value++;
+					value=value>100?100:value;
+					
+					console.info(value);
+					
+					$('.pro-front').css('width',prowidth);
+					$('.pro-block').css("left",prowidth-pblockWidth/2);
+					prowidth=value/100 * totalwidth;
+					addNumber();
+					}
+				})
+			})
+		</script>
 	</body>
 </html>
